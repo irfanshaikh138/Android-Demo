@@ -21,19 +21,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         button = findViewById(R.id.button);
         button2 = findViewById(R.id.button2);
-        button2.setOnClickListener(new AllButtonsInActivity());
-        button.setOnClickListener(new AllButtonsInActivity());
-    }
-
-    class AllButtonsInActivity implements OnClickListener {
-        @Override
-        public void onClick(View v) {
-            if (v.getId() == R.id.button) {
-                Log.d("demo", "Button One was clicked : reply by OnClickListener");
-            } else if (v.getId() == R.id.button2) {
-                Log.d("demo", "Button Two was Clicked : reply by OnClickListener");
+        button.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("demo", "Button one was clicked : reply by OnClickListener");
             }
-
-        }
+        });
+        button2.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("demo", "Button Two was clicked : reply by OnClickListener");
+            }
+        });
     }
+
+
 }

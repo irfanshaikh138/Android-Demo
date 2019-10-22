@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -25,9 +27,15 @@ public class MainActivity extends AppCompatActivity {
     public void doSomething(View v){
         Intent intent=null ,chooser=null;
         if (v.getId()==R.id.button){
-            Toast toast=Toast.makeText(this,"This is First Toast message of my app",Toast.LENGTH_LONG);
+         Toast toast=new Toast(this);
+         toast.setDuration(Toast.LENGTH_LONG);
+         toast.setGravity(Gravity.BOTTOM,0,0);
+         // Now Take xml appearance description and convert it into java view object.
+            LayoutInflater inflater=getLayoutInflater();
+            //
+            View appearance=inflater.inflate(R.layout.toast_layout,(ViewGroup) findViewById(R.id.root));
+            toast.setView(appearance);
             toast.show();
-            toast.setGravity(Gravity.CENTER,-100,-200);
 
         }
 

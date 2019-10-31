@@ -16,5 +16,24 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="mystyle">
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">#333</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+    <style name="mystyle2">
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">#333</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+
+    <style name="mystyleLight">
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">#666</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
 
 </resources>
